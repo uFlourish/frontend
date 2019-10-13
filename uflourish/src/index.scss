@@ -1,0 +1,84 @@
+$color-black: #1F1F1F;
+$color-green-body: #94D157;
+$color-green-accent: #37AF3B;
+$color-light-gray: #E5E5E5;
+$color-background-white: #F2F2F2;
+
+
+body {
+  margin: 0;
+  font-family: 'Sarala', sans-serif;
+  color: $color-black;
+}
+
+h1, h2, h3 {
+  color: $color-green-accent;
+}
+
+a {
+  color: $color-black;
+}
+
+a:hover {
+  color: $color-green-accent; 
+}
+
+.navigation-ul {
+  display: inline;
+}
+
+button {
+  background-color: $color-green-body;
+  border: 2px solid $color-green-accent;
+  border-radius: 20px;
+  padding: 2px 5px 2px 5px;
+  margin: 10px 10px 10px 10px;
+}
+
+button:disabled {
+  background-color: $color-light-gray;
+  border-color: $color-light-gray;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+%chatBubbleBase {
+  padding: 5px 5px 5px 5px;
+  margin: 10px 10px 10px 10px;
+}
+
+.botChat {
+  @extend %chatBubbleBase;
+  background-color: $color-green-body;
+  
+}
+
+.youChat {
+  @extend %chatBubbleBase;
+  background-color: $color-light-gray;
+}
+
+%chatSection {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftChatSection {
+  @extend %chatSection;
+  justify-content: left;
+}
+
+.rightChatSection {
+  @extend %chatSection;
+  justify-content: right;
+}
+
+
+.chatScreen {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
